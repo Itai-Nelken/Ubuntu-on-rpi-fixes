@@ -101,7 +101,7 @@ as of writing, the [zoom website download](https://zoom.us/client/latest/zoom_i6
 cd ~/Downloads
 tar -xf zoom.tar.xz
 ```
-5) create launcher script:
+5) create launcher script:<br>
 download my [launcher script](https://github.com/Itai-Nelken/Pi-Assistant/blob/main/apps/zoom/startzoom.sh) with this command
 ```sh
 wget https://github.com/Itai-Nelken/Pi-Assistant/blob/main/apps/zoom/startzoom.sh
@@ -144,7 +144,7 @@ echo "$(tput setaf 2)exiting in 5 seconds:($(tput sgr 0)"
 sleep 5
 ```
 
-6) create desktop shortcut:
+6) create desktop shortcut:<br>
 Download my [desktop shortcut file](https://github.com/Itai-Nelken/Pi-Assistant/blob/main/apps/zoom/files/zoom.desktop) with this command:
 ```sh
 wget https://github.com/Itai-Nelken/Pi-Assistant/blob/main/apps/zoom/files/zoom.desktop
@@ -177,7 +177,7 @@ git clone https://github.com/Botspot/vdesktop
 ```
 before running there are a few steps to follow if you plan to boot OS's to Desktop as well and not only CLI:
 
-1) <b>Compile ViGL:</b><br>
+1) <b>Compile VirGL:</b><br>
  -`sudo apt purge libepoxy0:armhf` and `sudo apt purge libepoxy-dev:armhf` <br>
  -`sudo apt install libepoxy0` and `sudo apt install libepoxy-dev`<br>
  -`sudo apt install -y meson libdrm-dev cmake libgbm-dev`<br>
