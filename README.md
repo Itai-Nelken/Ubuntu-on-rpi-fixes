@@ -1,5 +1,6 @@
 # Ubuntu-on-rpi-fixes
 apps, fixes, and optimizations for rpi running Ubuntu desktop
+![20.10.png](screenshots/20.10.png)
 
 ## Install pi-apps
 
