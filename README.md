@@ -168,4 +168,23 @@ StartupNotify=false
 Categories=Network;
 ```
 
+## Install vdesktop
+1) go to the [vdesktop github](https://github.com/botspot/vdesktop) and follow the download instructions, I added them bellow as well:
+```sh
+git clone https://github.com/Botspot/vdesktop
+```
+before running there are a few steps to follow if you plan to boot OS's to Desktop as well and not onli CLI:
 
+1) <b>Compile ViGL:</b>
+ -`sudo apt purge libepoxy0:armhf` and `sudo apt purge libepoxy-dev:armhf` 
+ -`sudo apt install libepoxy0` and `sudo apt install libepoxy-dev`
+ -`sudo apt install -y meson libdrm-dev cmake libgbm-dev`
+ -`git clone https://gitlab.freedesktop.org/virgl/virglrenderer.git`
+ -`cd virglrenderer`
+ -`meson --prefix=/usr/local -Dbuildtype=release build`
+ -`cd build`
+ -`ninja install`
+ -`cd ~ && sudo -E ldconfig`
+ 
+ now you need to open ~/vdesktop/vdesktop with a text editor, on Ubuntu I recommend the included one (gedit) and will use it for the example:
+ - after opening the file, click on the 3 lines next to the save button and click on the `find and replace` option in the menu that opens. then use it to replace all `sudo -u pi` with `sudo -u $USER` use the screenshots bellow for help.	
