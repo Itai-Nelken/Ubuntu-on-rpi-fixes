@@ -204,3 +204,4 @@ and run vdesktop again.
 ## To do
 - [ ]  add chromium media edition
 - [ ] add chromium optimization(s)
+- [ ] make automated script for installations
