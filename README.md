@@ -176,18 +176,18 @@ git clone https://github.com/Botspot/vdesktop
 ```
 before running there are a few steps to follow if you plan to boot OS's to Desktop as well and not only CLI:
 
-1) <b>Compile ViGL:</b>
- -`sudo apt purge libepoxy0:armhf` and `sudo apt purge libepoxy-dev:armhf` 
- -`sudo apt install libepoxy0` and `sudo apt install libepoxy-dev`
- -`sudo apt install -y meson libdrm-dev cmake libgbm-dev`
- -`git clone https://gitlab.freedesktop.org/virgl/virglrenderer.git`
- -`cd virglrenderer`
- -`meson --prefix=/usr/local -Dbuildtype=release build`
- -`cd build`
- -`ninja install`
- -`cd ~ && sudo -E ldconfig`
+1) <b>Compile ViGL:</b><br>
+ -`sudo apt purge libepoxy0:armhf` and `sudo apt purge libepoxy-dev:armhf` <br>
+ -`sudo apt install libepoxy0` and `sudo apt install libepoxy-dev`<br>
+ -`sudo apt install -y meson libdrm-dev cmake libgbm-dev`<br>
+ -`git clone https://gitlab.freedesktop.org/virgl/virglrenderer.git`<br>
+ -`cd virglrenderer`<br>
+ -`meson --prefix=/usr/local -Dbuildtype=release build`<br>
+ -`cd build`<br>
+ -`ninja install`<br>
+ -`cd ~ && sudo -E ldconfig`<br>
  
- now you need to open ~/vdesktop/vdesktop with a text editor, on Ubuntu I recommend the included one (gedit) and will use it for the example:
+ now you need to open `~/vdesktop/vdesktop` with a text editor, on Ubuntu I recommend the included one (gedit) and will use it for the example:
  - after opening the file, click on the 3 lines next to the save button and click on the `find and replace` option in the menu that opens. then use it to replace all `sudo -u pi` with `sudo -u $USER`, use the screenshots bellow for help.
 ![find-and-replace.png](screenshots/find-and-replace.png)
 ![replace.png](screenshots/repace.png)
