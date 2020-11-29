@@ -70,7 +70,8 @@ git clone https://github.com/Botspot/box86-updater
 ```
 ## Install and configure GNOME software
 
-The Ubuntu software app store is actually only the snap store, so to have moe apps from flatpak and the Ubuntu archive.
+The Ubuntu software app store is actually only the snap store, so to have more apps from flatpak and the Ubuntu archive.
+use gnome software (if you prefer a graphical "app store"):
 
 <b>Install GNOME software:</b>
 ```sh
