@@ -85,4 +85,87 @@ sudo apt install gnome-software-plugin-flatpak gnome-software-plugin-snap
 
 ## Install Zoom
 
-1) make sure you have box86 installed and updated, if not [scroll up and follow the instructions to install it.]()
+1) make sure you have box86 installed and updated, if not [scroll up and follow the instructions to install it.](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/blob/main/README.md#install-box86)
+
+2) Install dependencies:
+```sh
+sudo apt install libxcb-shape0:armhf libxcb-randr0:armhf libxcb-image:armhf libxcb-image0:armhf libxcb-xtest0:armhf libxcb-keysyms1:armhf libdbus-1-3:armhf libxcb-xtest0:armhf libxcb-xtest0
+```
+3) Download Zoom:
+as of writing, the [zoom website download](https://zoom.us/client/latest/zoom_i686.tar.xz) is down. you can download a offline copy I have from [here](https://github.com/Itai-Nelken/Pi-Assistant/raw/main/apps/zoom/files/zoom.tar.xz)
+
+4) open terminal and type:
+```sh
+cd ~/Downloads
+tar -xf zoom.tar.xz
+```
+5) create launcher script:
+download my [launcher script](https://github.com/Itai-Nelken/Pi-Assistant/blob/main/apps/zoom/startzoom.sh) with this command
+```sh
+wget https://github.com/Itai-Nelken/Pi-Assistant/blob/main/apps/zoom/startzoom.sh
+```
+and move it to the zoom folder with this command:
+```sh
+mv startzoom.sh ~/zoom
+```
+if you want to create your own script you can use this:
+```
+#!/bin/bash
+
+function error {
+  echo -e "\\e[91m$1\\e[39m"
+  exit 1
+}
+
+
+if [ -d ~/box86 ]; then
+
+  echo "box86 installed..."
+
+else
+  echo "Box86 missing, please install"
+  exit 1 
+
+fi
+
+	
+#go to zoom directory (~/zoom)
+cd ~/zoom
+echo "$(tput setaf 3)close this window to exit zoom$(tput sgr 0)"
+sleep 2
+echo "$(tput setaf 2)starting zoom, ignore any errors...$(tput sgr 0)"
+sleep 1
+#start zoom with box86
+pulseaudio --start
+box86 zoom || error "can't start zoom!"
+echo "$(tput setaf 2)exiting in 5 seconds:($(tput sgr 0)"
+sleep 5
+```
+
+6) create desktop shortcut:
+Download my [desktop shortcut file](https://github.com/Itai-Nelken/Pi-Assistant/blob/main/apps/zoom/files/zoom.desktop) with this command:
+```sh
+wget https://github.com/Itai-Nelken/Pi-Assistant/blob/main/apps/zoom/files/zoom.desktop
+```
+and move it to /usr/share/applications with this command:
+```sh
+sudo mv zoom.desktop /usr/share/applications
+```
+you'll be asked for your password.
+
+if you prefer to create your own shortcut, use this for help:
+```
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Zoom
+Comment=Linux x86 version of Zoom cloud meetings running using Box86
+Exec=/home/pi/zoom/startzoom.sh
+Icon=/home/pi/Pi-Assistant/icons/zoom-icon.png
+Path=/home/pi/Pi-Assistant/apps/zoom
+Terminal=true
+StartupNotify=false
+Categories=Network;
+```
+
+
