@@ -55,7 +55,7 @@ sudo systemctl restart systemd-binfmt
 ```
 ### Install box86 updater
 
-1) Go tu the [box86 updater github](https://github.com/Botspot/box86-updater)
+1) Go to the [box86 updater github](https://github.com/Botspot/box86-updater)
 2) follow the instructions there. I added the bellow as well:
 
 <b>NOTE:</b> This is not finished, and only lightly tested. Proceed at your own risk.
@@ -173,7 +173,7 @@ Categories=Network;
 ```sh
 git clone https://github.com/Botspot/vdesktop
 ```
-before running there are a few steps to follow if you plan to boot OS's to Desktop as well and not onli CLI:
+before running there are a few steps to follow if you plan to boot OS's to Desktop as well and not only CLI:
 
 1) <b>Compile ViGL:</b>
  -`sudo apt purge libepoxy0:armhf` and `sudo apt purge libepoxy-dev:armhf` 
@@ -187,4 +187,15 @@ before running there are a few steps to follow if you plan to boot OS's to Deskt
  -`cd ~ && sudo -E ldconfig`
  
  now you need to open ~/vdesktop/vdesktop with a text editor, on Ubuntu I recommend the included one (gedit) and will use it for the example:
- - after opening the file, click on the 3 lines next to the save button and click on the `find and replace` option in the menu that opens. then use it to replace all `sudo -u pi` with `sudo -u $USER` use the screenshots bellow for help.	
+ - after opening the file, click on the 3 lines next to the save button and click on the `find and replace` option in the menu that opens. then use it to replace all `sudo -u pi` with `sudo -u $USER`, use the screenshots bellow for help.
+![find-and-replace.png](screenshots/find-and-replace.png)
+![replace.png](screenshots/repace.png)
+
+2) <b>run vdesktop:</b>
+use the instructions in the [vdesktop github](https://github.com/botspot/vdesktop) to use it, I'm using a usb stick flashed with [TwisterOS](https://twisteros.com), and I want to launch the desktop, so to launch vdesktop, I use `sudo ~/vdesktop/vdesktop /dev/sdb gui`.
+follow the prompts to install the dependencies. if you get errors, and vdesktop exits, type in terminal this:
+```sh
+sudo apt install -f
+```
+and run vdesktop again.
+
