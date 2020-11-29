@@ -53,3 +53,36 @@ mkdir build; cd build; cmake .. -DRK3399=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo; ma
 sudo make install
 sudo systemctl restart systemd-binfmt
 ```
+### Install box86 updater
+
+1) Go tu the [box86 updater github](https://github.com/Botspot/box86-updater)
+2) follow the instructions there. I added the bellow as well:
+
+<b>NOTE:</b> This is not finished, and only lightly tested. Proceed at your own risk.
+  
+<b>Download:</b>
+```sh
+git clone https://github.com/Botspot/box86-updater
+```
+<b>Configure:</b>
+```sh
+~/box86-updater/configure
+```
+## Install and configure GNOME software
+
+The Ubuntu software app store is actually only the snap store, so to have moe apps from flatpak and the Ubuntu archive.
+
+<b>Install GNOME software:</b>
+```sh
+sudo apt install gnome-software
+```
+<b>add snap and flatpak:</b>
+```sh
+sudo apt install snapd
+sudo apt install flatpak
+sudo apt install gnome-software-plugin-flatpak gnome-software-plugin-snap
+```
+
+## Install Zoom
+
+1) make sure you have box86 installed and updated, if not [scroll up and follow the instructions to install it.]()
