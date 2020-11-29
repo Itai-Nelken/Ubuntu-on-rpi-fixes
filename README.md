@@ -202,6 +202,6 @@ sudo apt install -f
 and run vdesktop again.
 
 ## To do
-- [ ]  add chromium media edition
+- [ ]  [add chromium media edition](https://github.com/monkaBlyat/schroot-chromium-armhf)
 - [ ] add chromium optimization(s)
 - [ ] make automated script for installations
