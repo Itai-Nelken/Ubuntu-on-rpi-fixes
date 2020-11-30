@@ -24,6 +24,15 @@ load-module module-udev-detect tsched=0
 ```
 [(source)](https://www.raspberrypi.org/forums/viewtopic.php?f=131&t=289126&p=1769729#p1769729)
 
+## Fix missing codecs for Videos app<br>
+
+<b>full error:</b> `the playback of this movie requires a H.264 (Main Profile) decoder which is not installed`<br>
+
+<b>fix:</b><br>
+```sh
+sudo apt-get install gstreamer1.0-libav ffmpeg
+```
+
 ## Install [box86](https://github.com/ptitSeb/box86)
 
 <b>add armhf architecture (multiarch):</b><br>
