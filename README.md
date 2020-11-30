@@ -24,7 +24,9 @@ load-module module-udev-detect tsched=0
 ```
 [(source)](https://www.raspberrypi.org/forums/viewtopic.php?f=131&t=289126&p=1769729#p1769729)
 
-## Fix missing codecs for Videos app<br>
+## Fix missing codecs for Videos app (GNOME videos, totem = same app) <br>
+
+### NOTE: this only fixes mp4 video and lets you watch from the built in channels, for anything else I recommend VLC (`sudo apt install vlc`)
 
 <b>full error:</b> `the playback of this movie requires a H.264 (Main Profile) decoder which is not installed`<br>
 
