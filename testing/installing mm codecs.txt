@@ -1,0 +1,19 @@
+ sudo apt-get install ubuntu-restricted-extras
+
+sudo apt-get install libavcodec58 libav-tools ffmpeg
+
+sudo apt-get install libavcodec58  ffmpeg
+
+sudo apt install libdvdnav4 libdvdread8 gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly libdvd-pkg
+
+sudo apt-get install gstreamer1.0-libav ffmpeg -y
+
+sudo apt install ubuntu-restricted-extras -y
+sudo dpkg-reconfigure libdvd-pkg
+
+
+https://askubuntu.com/questions/1094062/libdvd-pkg-apt-get-check-failed-you-may-have-broken-packages-aborting
+
+https://askubuntu.com/questions/56446/how-do-i-install-the-ubuntu-restricted-extras-package
+
+https://linuxhint.com/install_multimedia_codecs_ubuntu/
