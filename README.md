@@ -205,3 +205,6 @@ and run vdesktop again.
 - [ ]  [add chromium media edition](https://github.com/monkaBlyat/schroot-chromium-armhf)
 - [ ] add chromium optimization(s)
 - [ ] make automated script for installations
+- [ ] add rpi imager (not snap or flatpak)
+- [ ] add bookshelf app from rpiOS
+- [ ] add code the classics games (from rpiOS)
