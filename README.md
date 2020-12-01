@@ -26,7 +26,7 @@ load-module module-udev-detect tsched=0
 
 ## Fix missing codecs for Videos app (GNOME videos, totem = same app) <br>
 
-### NOTE: this only fixes mp4 video and lets you watch from the built in channels, for anything else I recommend VLC (`sudo apt install vlc`)
+### NOTE: this only fixes mp4 video and lets you watch from the built in channels, for anything else I recommend VLC (`sudo apt install vlc`) or MPV (`sudo apt install mpv`), they also perform better.
 
 <b>full error:</b> `the playback of this movie requires a H.264 (Main Profile) decoder which is not installed`<br>
 
@@ -34,7 +34,7 @@ load-module module-udev-detect tsched=0
 ```sh
 sudo apt-get install gstreamer1.0-libav ffmpeg
 ```
-<b>IF YOU KNOW ANY ITHER FIXES, [OPEN A ISSUE](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/issues/new/) AND TELL ME HOW TO INSTALL IT, IF IT WORKS FOR ME  I'LL ADD IT.</b>
+<b>IF YOU KNOW ANY OTHER FIXES, [OPEN A ISSUE](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/issues/new/) AND TELL ME HOW TO INSTALL IT, IF IT WORKS I'LL ADD IT.</b>
 
 ## Install [box86](https://github.com/ptitSeb/box86)
 
@@ -69,7 +69,7 @@ sudo systemctl restart systemd-binfmt
 ### Install box86 updater
 
 1) Go to the [box86 updater github](https://github.com/Botspot/box86-updater)
-2) follow the instructions there. I added the bellow as well:
+2) follow the instructions there. I added them bellow as well:
 
 <b>NOTE:</b> This is not finished, and only lightly tested. Proceed at your own risk.
   
@@ -92,8 +92,13 @@ sudo apt install gnome-software
 ```
 <b>add snap and flatpak:</b>
 ```sh
+#install the snap daemon, it probably already installed, but just in case
 sudo apt install snapd
+
+#install flatpak
 sudo apt install flatpak
+
+#install the snap and flatpak plugins for GNOME software
 sudo apt install gnome-software-plugin-flatpak gnome-software-plugin-snap
 ```
 
@@ -106,12 +111,12 @@ sudo apt install gnome-software-plugin-flatpak gnome-software-plugin-snap
 sudo apt install libxcb-shape0:armhf libxcb-randr0:armhf libxcb-image:armhf libxcb-image0:armhf libxcb-xtest0:armhf libxcb-keysyms1:armhf libdbus-1-3:armhf libxcb-xtest0:armhf libxcb-xtest0
 ```
 3) Download Zoom:
-as of writing, the [zoom website download](https://zoom.us/client/latest/zoom_i686.tar.xz) is down. you can download a offline copy I have from [here](https://github.com/Itai-Nelken/Pi-Assistant/raw/main/apps/zoom/files/zoom.tar.xz)
+as of writing, the [zoom website download](https://zoom.us/client/latest/zoom_i686.tar.xz) is down. you can download a copy I have from [here](https://github.com/Itai-Nelken/Pi-Assistant/raw/main/apps/zoom/files/zoom.tar.xz), save it to your `Downloads` folder.
 
 4) open terminal and type:
 ```sh
 cd ~/Downloads
-tar -xf zoom.tar.xz
+tar -xf zoom.tar.xz /home/$USER
 ```
 5) create launcher script:<br>
 download my [launcher script](https://github.com/Itai-Nelken/Pi-Assistant/blob/main/apps/zoom/startzoom.sh) with this command
