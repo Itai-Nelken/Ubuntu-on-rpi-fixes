@@ -42,7 +42,7 @@ load-module module-udev-detect tsched=0
 ```sh
 sudo apt install gstreamer1.0-libav ffmpeg
 ```
-<b>IF YOU KNOW ANY OTHER FIXES, [OPEN A ISSUE](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/issues/new/) AND TELL ME HOW TO INSTALL IT, IF IT WORKS I'LL ADD IT.</b>
+<b>IF YOU KNOW ANY OTHER FIXES, [OPEN A ISSUE](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/issues/new/) AND TELL ME HOW TO INSTALL IT, SO I CAN ADD IT.</b>
 
 ## Install [box86](https://github.com/ptitSeb/box86)
 
