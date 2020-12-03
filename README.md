@@ -79,8 +79,6 @@ sudo systemctl restart systemd-binfmt
 
 1) Go to the [box86 updater github](https://github.com/Botspot/box86-updater)
 2) follow the instructions there. I added them bellow as well:
-
-><b>NOTE:</b><br> This is not finished, and only lightly tested. Proceed at your own risk.
   
 <b>Download:</b>
 ```sh
