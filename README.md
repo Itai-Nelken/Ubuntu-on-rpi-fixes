@@ -1,6 +1,14 @@
 # Ubuntu-on-rpi-fixes
-apps, fixes, and optimizations for rpi running Ubuntu desktop
+<b>apps, fixes, and optimizations for rpi running Ubuntu desktop.</b><br>
+<br>
 ![20.10.png](screenshots/20.10.png)
+
+## Flash Ubuntu
+1) Download Ubuntu from here: https://ubuntu.com/download/raspberry-pi<br>
+> <b>NOTE:</b> Only Ubuntu 20.10 has a version with a desktop, to use other Versions, download Ubuntu server and use [Desktopify](https://github.com/wimpysworld/desktopify) to install the Ubuntu desktop on it.
+2) flash the file to a SD card (or SSD/USB stick if you want to USB boot) with [etcher](https://www.balena.io/etcher/) or [rpi imager](https://www.raspberrypi.org/software/).
+
+>- a few notes:<br>1) USB booting needs the september version of the rpi bootloader or newer.<br>2) you can use any flashing software you want, I tested etcher and rpi imager and know they work. you can also use [USBImager](https://gitlab.com/bztsrc/usbimager).
 
 ## Install pi-apps
 
@@ -26,13 +34,13 @@ load-module module-udev-detect tsched=0
 
 ## Fix missing codecs for Videos app (GNOME videos, totem = same app) <br>
 
-### NOTE: this only fixes mp4 video and lets you watch from the built in channels, for anything else I recommend VLC (`sudo apt install vlc`) or MPV (`sudo apt install mpv`), they also perform better.
+><b>NOTE:</b><br> this only fixes mp4 video and lets you watch from the built in channels, for anything else I recommend VLC (`sudo apt install vlc`) or MPV (`sudo apt install mpv`), they also perform better.
 
 <b>full error:</b> `the playback of this movie requires a H.264 (Main Profile) decoder which is not installed`<br>
 
 <b>fix:</b><br>
 ```sh
-sudo apt-get install gstreamer1.0-libav ffmpeg
+sudo apt install gstreamer1.0-libav ffmpeg
 ```
 <b>IF YOU KNOW ANY OTHER FIXES, [OPEN A ISSUE](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/issues/new/) AND TELL ME HOW TO INSTALL IT, IF IT WORKS I'LL ADD IT.</b>
 
@@ -44,13 +52,14 @@ open terminal and type:
 sudo dpkg --add-architecture armhf
 sudo apt update
 ```
-<b>Install dependencies:</b>
+<b>Install dependencies:</b><br>
+<br>
 <b>for Ubuntu 20.04:</b>
 ```sh
 sudo apt install libc6:armhf  libx11-6:armhf  libgdk-pixbuf2.0-0:armhf libgtk2.0-0:armhf libstdc++6:armhf libsdl2-2.0-0:armhf mesa-va-drivers:armhf libsdl1.2-dev:armhf libsdl-mixer1.2:armhf libpng16-16:armhf libcal3d12v5:armhf libsdl2-net-2.0-0:armhf libopenal1:armhf libsdl2-image-2.0-0:armhf libvorbis-dev:armhf libcurl4:armhf osspd:armhf pulseaudio:armhf libjpeg62:armhf libudev1:armhf libgl1-mesa-dev:armhf libsnappy1v5:armhf libx11-dev:armhf libsmpeg0:armhf libboost-filesystem1.67.0:armhf libboost-program-options1.67.0:armhf libavcodec58:armhf libavformat58:armhf libswscale5:armhf libmyguiengine3debian1v5:armhf libboost-iostreams1.67.0:armhf  libsdl2-mixer-2.0-0:armhf
 ```
 
-<b>For Ubuntu 20.10</b>
+<b>For Ubuntu 20.10:</b>
 ```sh
 sudo apt install libc6:armhf  libx11-6:armhf  libgdk-pixbuf2.0-0:armhf libgtk2.0-0:armhf libstdc++6:armhf libsdl2-2.0-0:armhf mesa-va-drivers:armhf libsdl1.2-dev:armhf libsdl-mixer1.2:armhf libpng16-16:armhf libcal3d12v5:armhf libsdl2-net-2.0-0:armhf libopenal1:armhf libsdl2-image-2.0-0:armhf libvorbis-dev:armhf libcurl4:armhf osspd:armhf pulseaudio:armhf libjpeg62:armhf libudev1:armhf libgl1-mesa-dev:armhf libsnappy1v5:armhf libx11-dev:armhf libsmpeg0:armhf libboost-filesystem1.71.0:armhf libboost-program-options1.71.0:armhf libavcodec58:armhf libavformat58:armhf libswscale5:armhf libmyguiengine3debian1v5:armhf libboost-iostreams1.71.0:armhf  libsdl2-mixer-2.0-0:armhf
 ```
@@ -71,7 +80,7 @@ sudo systemctl restart systemd-binfmt
 1) Go to the [box86 updater github](https://github.com/Botspot/box86-updater)
 2) follow the instructions there. I added them bellow as well:
 
-<b>NOTE:</b> This is not finished, and only lightly tested. Proceed at your own risk.
+><b>NOTE:</b><br> This is not finished, and only lightly tested. Proceed at your own risk.
   
 <b>Download:</b>
 ```sh
@@ -127,7 +136,7 @@ and move it to the zoom folder with this command:
 ```sh
 mv startzoom.sh ~/zoom
 ```
-if you want to create your own script you can use this:
+if you want to create your own script, copy the script bellow to a new file and name it `startzoom.sh`:
 ```
 #!/bin/bash
 
@@ -172,7 +181,7 @@ sudo mv zoom.desktop /usr/share/applications
 ```
 you'll be asked for your password.
 
-if you prefer to create your own shortcut, use this for help:
+if you prefer to create your own shortcut, copy the text bellow to a new file and call it `zoom.desktop`:
 ```
 [Desktop Entry]
 Version=1.0
@@ -186,6 +195,7 @@ Terminal=true
 StartupNotify=false
 Categories=Network;
 ```
+><b>NOTE:</b><br> you can call the file whatever you want, but remember to add the `.desktop` file extension
 
 ## Install vdesktop
 1) go to the [vdesktop github](https://github.com/botspot/vdesktop) and follow the download instructions, I added them bellow as well:
@@ -195,8 +205,8 @@ git clone https://github.com/Botspot/vdesktop
 before running there are a few steps to follow if you plan to boot OS's to Desktop as well and not only CLI:
 
 1) <b>Compile VirGL:</b><br>
- -`sudo apt purge libepoxy0:armhf` and `sudo apt purge libepoxy-dev:armhf` <br>
- -`sudo apt install libepoxy0` and `sudo apt install libepoxy-dev`<br>
+ -`sudo apt purge libepoxy0:armhf; sudo apt purge libepoxy-dev:armhf` <br>
+ -`sudo apt install -y libepoxy0; sudo apt install libepoxy-dev`<br>
  -`sudo apt install -y meson libdrm-dev cmake libgbm-dev`<br>
  -`git clone https://gitlab.freedesktop.org/virgl/virglrenderer.git`<br>
  -`cd virglrenderer`<br>
@@ -205,8 +215,8 @@ before running there are a few steps to follow if you plan to boot OS's to Deskt
  -`ninja install`<br>
  -`cd ~ && sudo -E ldconfig`<br>
  
- now you need to open `~/vdesktop/vdesktop` with a text editor, on Ubuntu I recommend the included one (gedit) and will use it for the example:
- - after opening the file, click on the 3 lines next to the save button and click on the `find and replace` option in the menu that opens. then use it to replace all `sudo -u pi` with `sudo -u $USER`, use the screenshots bellow for help.
+ now you need to open `~/vdesktop/vdesktop` with a text editor, on Ubuntu I recommend the included one (gedit) and I will use it for the next steps:
+ - after opening the file, click on the 3 lines next to the save button and click on the `find and replace` option in the menu that opens. then use it to replace all `sudo -u pi` with `sudo -u $USER` and click on 'Replace All', use the screenshots bellow for help.
 ![find-and-replace.png](screenshots/find-and-replace.png)
 ![replace.png](screenshots/repace.png)
 
