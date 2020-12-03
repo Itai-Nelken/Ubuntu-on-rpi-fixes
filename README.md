@@ -8,7 +8,7 @@
 > <b>NOTE:</b> Only Ubuntu 20.10 has a version with a desktop, to use other Versions, download Ubuntu server and use [Desktopify](https://github.com/wimpysworld/desktopify) to install the Ubuntu desktop on it.
 2) flash the file to a SD card (or SSD/USB stick if you want to USB boot) with [etcher](https://www.balena.io/etcher/) or [rpi imager](https://www.raspberrypi.org/software/).
 
->- a few notes:<br>1) USB booting needs the september version of the rpi bootloader or newer.<br>2) you can use any flashing software you want, I tested etcher and rpi imager and know they work. you can also use [USBImager](https://gitlab.com/bztsrc/usbimager).
+>- a few notes:<br>1) USB booting needs the september 2020 version of the rpi bootloader or newer.<br>2) you can use any flashing software you want, I tested etcher and rpi imager and know they work. you can also use [USBImager](https://gitlab.com/bztsrc/usbimager).
 
 ## Install pi-apps
 
