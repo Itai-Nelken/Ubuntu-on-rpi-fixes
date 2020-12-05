@@ -79,6 +79,8 @@ case "$choice" in
   * ) echo "invalid";;
 esac
 
+sleep 2
+clear
 #install vdesktop
 read -p "Do you want to install Zoom (zoom x86 client running with box86, box86 required) (y/n)?" choice
 case "$choice" in 
