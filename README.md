@@ -115,7 +115,7 @@ sudo apt install gnome-software-plugin-flatpak gnome-software-plugin-snap
 
 2) Install dependencies:
 ```sh
-sudo apt install libxcb-shape0:armhf libxcb-randr0:armhf libxcb-image:armhf libxcb-image0:armhf libxcb-xtest0:armhf libxcb-keysyms1:armhf libdbus-1-3:armhf libxcb-xtest0:armhf libxcb-xtest0
+sudo apt install libxcb-shape0:armhf libxcb-randr0:armhf libxcb-image:armhf libxcb-image0:armhf libxcb-xtest0:armhf libxcb-keysyms1:armhf libdbus-1-3:armhf
 ```
 3) Download Zoom:
 as of writing, the [zoom website download](https://zoom.us/client/latest/zoom_i686.tar.xz) is down. you can download a copy I have from [here](https://github.com/Itai-Nelken/Pi-Assistant/raw/main/apps/zoom/files/zoom.tar.xz), save it to your `Downloads` folder.
