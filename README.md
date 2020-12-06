@@ -213,10 +213,6 @@ before running there are a few steps to follow if you plan to boot OS's to Deskt
  -`ninja install`<br>
  -`cd ~ && sudo -E ldconfig`<br>
  
- now you need to open `~/vdesktop/vdesktop` with a text editor, on Ubuntu I recommend the included one (gedit) and I will use it for the next steps:
- - after opening the file, click on the 3 lines next to the save button and click on the `find and replace` option in the menu that opens. then use it to replace all `sudo -u pi` with `sudo -u $USER` and click on 'Replace All', use the screenshots bellow for help.
-![find-and-replace.png](screenshots/find-and-replace.png)
-![replace.png](screenshots/repace.png)
 
 2) <b>run vdesktop:</b>
 use the instructions in the [vdesktop github](https://github.com/botspot/vdesktop) to use it, I'm using a usb stick flashed with [TwisterOS](https://twisteros.com), and I want to launch the desktop, so to launch vdesktop, I use `sudo ~/vdesktop/vdesktop /dev/sdb gui`.
