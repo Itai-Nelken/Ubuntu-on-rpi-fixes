@@ -20,12 +20,6 @@ cd build
 ninja install
 cd ~ && sudo -E ldconfig
 
-sudo apt install sed
-echo "replacing sudo -u pi with sudo -u $USER in ~/vdesktop/vdesktop"
-cd ~/vdesktop
-sed -i 's/sudo -u pi/sudo -u $USER/g' vdesktop
-cd ~/Downloads/Ubuntu-on-rpi-fixes/scripts
-
 echo "
 
 
