@@ -23,6 +23,7 @@ echo "enter your password when asked to"
 sudo chmod +x install-box86-ubuntu-64bit.sh
 sudo chmod +x zoom-install-64bit.sh
 sudo chmod +x vdesktop-install-64bit.sh
+sudo chmod +x sys-info-check.sh
 
 echo "updating..."
 sudo apt update
@@ -93,7 +94,7 @@ sleep 2
 clear
 
 #install vdesktop
-read -p "Do you want to install vdesktop (run OS's inside a container (like a VM), doesn't work with any OS) (y/n)?" choice
+read -p "Do you want to install vdesktop (run OS's inside a "VM", doesn't work with any OS) (y/n)?" choice
 case "$choice" in 
   y|Y ) echo "vdesktop will be installed" && ./vdesktop-install-64bit.sh ;;
   n|N ) echo "vdesktop won't be installed"   ;;

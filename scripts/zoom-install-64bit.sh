@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#check system info to determine if script can run
+echo "checking system info to determine if script can run"
+./sys-info-test.sh
+
 echo "checking if box86 is installed..."
 #check if box86 is installed
 if [ -d ~/box86 ];then

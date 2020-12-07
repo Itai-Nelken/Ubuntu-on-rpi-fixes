@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#check system info to determine if script can run
+echo "checking system info to determine if script can run"
+./sys-info-check.sh 
+
 echo "cloning vdesktop repo..."
 git clone https://github.com/Botspot/vdesktop
 

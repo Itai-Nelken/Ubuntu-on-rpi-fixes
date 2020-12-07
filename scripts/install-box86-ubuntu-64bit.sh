@@ -1,48 +1,10 @@
 #!/bin/bash
 
-function error {
-  echo -e "\\e[91m$1\\e[39m"
-  exit 1
-}
+#check system info to determine if script can run
+echo "checking system info to determine if script can run"
+./sys-info-check.sh 
 
-#check if CPU is ARM
-echo "checking if your CPU architecture is ARM"
-sleep 1
-ARCH=$(uname -m)
-if [ "${ARCH}" != "armv7l" ] && [ "${ARCH}" != "aarch64" ]; then
-  echo "This script is only intended to run on ARM devices."
-  echo "exiting in 10 seconds"
-  sleep 10
-  exit
-fi
-echo "CPU architecture is ARM☑️"
-
-#checking if OS is Ubuntu
-echo "checking if your OS is Ubuntu"
-IS_UBUNTU=$(lsb_release -is)
-if [ "${IS_UBUNTU}" != "Ubuntu" ]; then
-  echo "This script is made for Ubuntu."
-  read -p "ddo you want to proceed anyway (y/n)?" choice
-  case "$choice" in 
-    y|Y ) echo "proceeding anyway"; sleep 1 ;;    
-	n|N ) echo "exiting in 2 seconds"; sleep 2; exit   ;;
-    * ) echo "invalid";;
-  esac 
-fi
-
-#check if OS is 64 bit
-echo "checking if you OS is 64 bit..."
-sleep 1
-if $(uname -m | grep '64'); then
-
-  #64 bit
-  echo "OS is 64 bit☑️"
-else
-  #32 bit 
-  echo "your OS is 32 bit, this script is only intended for 64bit Ubuntu"
-fi
-
-#the actual install part of the script
+#update
 sudo apt update
 
 #add armhf architecture (multiarch)
