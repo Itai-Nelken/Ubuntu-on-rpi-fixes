@@ -17,7 +17,7 @@ echo "checking if your OS is Ubuntu"
 sleep 1
 IS_UBUNTU=$(lsb_release -is)
 if [ "${IS_UBUNTU}" != "Ubuntu" ]; then
-  echo "This script is made for Ubuntu."
+  echo "This script is made for Ubuntu only."
   read -p "do you want to proceed anyway (y/n)?" choice
   case "$choice" in 
     y|Y ) echo "proceeding anyway"; sleep 1 ;;    
