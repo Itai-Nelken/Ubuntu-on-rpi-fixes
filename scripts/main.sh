@@ -100,3 +100,14 @@ case "$choice" in
   n|N ) echo "vdesktop won't be installed"   ;;
   * ) echo "invalid";;
 esac
+
+sleep2
+clear
+
+#install rpi-imager
+read -p "Do you want to install rpi-imager (from official repo) (y/n)?" choice
+case "$choice" in 
+  y|Y ) echo "rpi-imager will be installed" && wget http://archive.raspberrypi.org/debian/pool/main/r/rpi-imager/rpi-imager_1.4_arm64.deb && sudo apt install --fix-broken rpi-imager_1.4_arm64.deb ;;
+  n|N ) echo "rpi-imager won't be installed"   ;;
+  * ) echo "invalid";;
+esac
