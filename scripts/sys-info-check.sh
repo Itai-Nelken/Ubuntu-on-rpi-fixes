@@ -12,7 +12,7 @@ else
 fi
 
 
-
+#check if OS is Ubuntu
 echo "checking if your OS is Ubuntu"
 sleep 1
 IS_UBUNTU=$(lsb_release -is)
@@ -20,7 +20,7 @@ if [ "${IS_UBUNTU}" != "Ubuntu" ]; then
   echo "This script is made for Ubuntu only."
   read -p "do you want to proceed anyway (y/n)?" choice
   case "$choice" in 
-    y|Y ) echo "proceeding anyway"; sleep 1 ;;    
+    y|Y ) echo "proceeding anyway. beware: things might not work."; sleep 1 ;;    
 	n|N ) echo "exiting in 2 seconds"; sleep 2; exit   ;;
     * ) echo "invalid";;
   esac 
@@ -41,5 +41,11 @@ elif [[ $(lsb_release -rs) == "20.10" ]]; then
 
 else 
 	echo "you are not running Ubuntu 20.04 or 20.10, this script is only intended for 20.04 or 20.10"
+	read -p "do you want to proceed anyway (y/n)?" choice
+  case "$choice" in 
+    y|Y ) echo "proceeding anyway. beware: things might not work."; sleep 1 ;;    
+	n|N ) echo "exiting in 2 seconds"; sleep 2; exit   ;;
+    * ) echo "invalid";;
+  esac
 fi
 
