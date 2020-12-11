@@ -82,16 +82,6 @@ esac
 
 sleep 2
 clear
-#install vdesktop
-read -p "Do you want to install Zoom (zoom x86 client running with box86, box86 required) (y/n)?" choice
-case "$choice" in 
-  y|Y ) echo "Zoom will be installed" && ./zoom-install-64bit.sh ;;
-  n|N ) echo "Zoom won't be installed"   ;;
-  * ) echo "invalid";;
-esac
-
-sleep 2
-clear
 
 #install vdesktop
 read -p "Do you want to install vdesktop (run OS's inside a "VM", doesn't work with any OS) (y/n)?" choice
@@ -101,7 +91,7 @@ case "$choice" in
   * ) echo "invalid";;
 esac
 
-sleep2
+sleep 2
 clear
 
 #install rpi-imager
