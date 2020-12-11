@@ -1,3 +1,8 @@
+#!/bin/bash
+
+echo "checking if the scripts can run successfully on your system using sys-info-check.sh script..."
+sleep 1
+
 #check if CPU is ARM 64bit
 echo "checking if your CPU architecture is ARM 64bit"
 sleep 1
