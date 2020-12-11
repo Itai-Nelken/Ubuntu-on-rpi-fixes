@@ -222,6 +222,25 @@ sudo apt install -f
 ```
 and run vdesktop again.
 
+## Install RPi Imager
+
+0) you could always install the snap or flatpak version, but this is to install the real official version and is more up to date (not that it matters that much, but this version will perform better)
+
+1) go to this [link](http://archive.raspberrypi.org/debian/pool/main/r/rpi-imager/) and scroll down untill you see `rpi-imager-dbgsym_1.4_arm64.deb` (as of writing, v1.4 is the newest version, if there is a newer version, than click on it of course (this version won't be there)) now click on it to download it. 
+><b>NOTE:</b><br>It's completley safe to download from this site, it's the rpi-archive. every time you run `sudo apt install <something>` apt downloads the `.deb` file from this site, and than installs it.
+
+2) once finished Downloading open terminal in the folder where you downloaded the file to (unless you changed it it will be the Dowloads folder in your home folder) and type the following in:
+```sh
+sudo apt install --fix-broken the-deb-file-name.deb
+```
+but replace `the-deb-file-name.deb` with the name of the file you downloaded, for example this is how it will look as of writing this:
+```sh
+sudo apt install --fix-broken rpi-imager-dbgsym_1.4_arm64.deb
+```
+><b>NOTE:</b>
+>you can also install by double clicking the `.deb` file. it will open in the package manager (in Ubuntu `software install`) and you simply have to click `Install`, but I think it's better to install from Terminal, personal preference. do whatever method you prefer.
+
+
 ## Experimental scripts
 
 the experimental scripts located in the scripts folder in this repo ask you if you want to install each app, if yes they install it. they will stay experimental untill they can also fix stuff (like the choppy audio problem). I plan on adding a GUI in the future.<br>
@@ -235,7 +254,7 @@ git clone https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes.git; cd Ubuntu-on-r
 - [ ]  [add chromium media edition](https://github.com/monkaBlyat/schroot-chromium-armhf)
 - [ ] add chromium optimization(s)
 - [ ] make automated script for installations
-- [ ] add rpi imager (not snap or flatpak)
+- [x] add rpi imager (not snap or flatpak)
 - [ ] add bookshelf app from rpiOS
 - [ ] add code the classics games (from rpiOS)
 - [ ] add vnc server (and viewer, from rpiOS)
