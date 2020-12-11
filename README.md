@@ -238,4 +238,4 @@ git clone https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes.git; cd Ubuntu-on-r
 - [ ] add rpi imager (not snap or flatpak)
 - [ ] add bookshelf app from rpiOS
 - [ ] add code the classics games (from rpiOS)
-- [ ] vnc server (and viewer, from rpiOS)
+- [ ] add vnc server (and viewer, from rpiOS)
