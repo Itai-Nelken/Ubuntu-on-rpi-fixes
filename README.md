@@ -251,7 +251,7 @@ git clone https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes.git; cd Ubuntu-on-r
 ```
 
 ## To do
-- [ ] [add chromium media edition](https://github.com/krishenriksen/schroot-chromium-armhf)
+- [ ] [add chromium media edition](https://github.com/monkaBlyat/docker-chromium-armhf)
 - [ ] add chromium optimization(s)
 - [ ] make automated script for installations
 - [x] add rpi imager (not snap or flatpak)
