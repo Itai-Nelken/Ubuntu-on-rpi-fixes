@@ -171,7 +171,7 @@ sleep 5
 6) create desktop shortcut:<br>
 Download my [desktop shortcut file](https://github.com/Itai-Nelken/Pi-Assistant/blob/main/apps/zoom/files/zoom.desktop) with this command:
 ```sh
-wget https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/apps/zoom/files/zoom.desktop
+wget https://raw.githubusercontent.com/Itai-Nelken/Ubuntu-on-rpi-fixes/main/files/zoom.desktop
 ```
 and move it to /usr/share/applications with this command:
 ```sh
