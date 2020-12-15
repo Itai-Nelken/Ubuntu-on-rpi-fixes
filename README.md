@@ -128,7 +128,7 @@ tar -xf zoom.tar.xz /home/$USER
 5) create launcher script:<br>
 download my [launcher script](https://github.com/Itai-Nelken/Pi-Assistant/blob/main/apps/zoom/startzoom.sh) with this command
 ```sh
-wget https://github.com/Itai-Nelken/Pi-Assistant/blob/main/apps/zoom/startzoom.sh
+wget https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/apps/zoom/startzoom.sh
 ```
 and move it to the zoom folder with this command:
 ```sh
@@ -171,7 +171,7 @@ sleep 5
 6) create desktop shortcut:<br>
 Download my [desktop shortcut file](https://github.com/Itai-Nelken/Pi-Assistant/blob/main/apps/zoom/files/zoom.desktop) with this command:
 ```sh
-wget https://github.com/Itai-Nelken/Pi-Assistant/blob/main/apps/zoom/files/zoom.desktop
+wget https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/apps/zoom/files/zoom.desktop
 ```
 and move it to /usr/share/applications with this command:
 ```sh
