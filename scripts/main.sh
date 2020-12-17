@@ -19,7 +19,7 @@ done
 
 
 #mark all aditional scripts as executables
-echo "enter your password when asked to"
+echo "enter your password when or if asked to"
 sudo chmod +x install-box86-ubuntu-64bit.sh
 sudo chmod +x zoom-install-64bit.sh
 sudo chmod +x vdesktop-install-64bit.sh
