@@ -263,3 +263,4 @@ git clone https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes.git; cd Ubuntu-on-r
 - [ ] add bookshelf app from rpiOS
 - [ ] add code the classics games (from rpiOS)
 - [ ] add vnc server (and viewer, from rpiOS)
+- [ ] add [youtubuddy](https://github.com/Botspot/youtubuddy)
