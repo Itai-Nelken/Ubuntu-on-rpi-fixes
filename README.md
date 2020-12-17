@@ -227,7 +227,7 @@ and run vdesktop again.
 0) you could always install the snap or flatpak version, but this is to install the real official version and is more up to date (not that it matters that much, but this version will perform better)
 
 1) go to this [link](http://archive.raspberrypi.org/debian/pool/main/r/rpi-imager/) and scroll down untill you see `rpi-imager_1.4_arm64.deb` (as of writing, v1.4 is the newest version, if there is a newer version, than click on it of course (this version won't be there)) now click on it to download it. 
-><b>NOTE:</b><br>It's completley safe to download from this site, it's the rpi-archive. every time you run `sudo apt install <something>` apt downloads the `.deb` file from this site, and than installs it.
+><b>NOTE:</b><br>It's completley safe to download from this site, it's the rpi-archive. every time you run `sudo apt install <something>` on RPiOS, apt downloads the `.deb` file from this site, and than installs it (on Ubuntu, apt downloads from [here](https://packages.ubuntu.com)).
 
 2) once finished Downloading open terminal in the folder where you downloaded the file to (unless you changed it it will be the Dowloads folder in your home folder) and type the following in:
 ```sh
