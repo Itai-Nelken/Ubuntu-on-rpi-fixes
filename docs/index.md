@@ -1,7 +1,7 @@
 # Ubuntu-on-rpi-fixes
-<b>apps, fixes, and optimizations for rpi running Ubuntu desktop.</b><br>
+<b>apps, fixes, and optimizations I did on my rpi running Ubuntu desktop.</b><br>
 <br>
-![20.10.png](screenshots/20.10.png)
+![20.10.png](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/blob/main/screenshots/20.10.png)
 
 ## Flash Ubuntu
 1) Download Ubuntu from here: https://ubuntu.com/download/raspberry-pi<br>
@@ -251,6 +251,6 @@ git clone https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes.git; cd Ubuntu-on-r
 ```
 
 ## Contribute
-- if you have something you want to be added, open a issue and use the `feature request` template
-- if you found something that doesn't work, open a issue and use the `bur report` template. if you have a fix , add it.
-- anything else? use the `open a blank issue` option when openin a issue.
+- if you have something you want to be added, open a issue [here](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/issues/new/choose) and use the `feature request` template
+- if you found something that doesn't work, [open a issue](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/issues/new/choose) and use the `bur report` template. if you have a fix , add it.
+- anything else? use the `open a blank issue` option when [opening a issue](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/issues/new/choose).
