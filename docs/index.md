@@ -111,7 +111,7 @@ sudo apt install gnome-software-plugin-flatpak gnome-software-plugin-snap
 
 ## Install Zoom
 
-1) make sure you have box86 installed and updated, if not [scroll up and follow the instructions to install it.](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/blob/main/README.md#install-box86)
+1) make sure you have box86 installed and updated, if not scroll up and follow the instructions to install it.
 
 2) Install dependencies:
 ```sh
