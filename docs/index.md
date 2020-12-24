@@ -253,5 +253,5 @@ git clone https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes.git; cd Ubuntu-on-r
 
 ## Contribute
 - if you have something you want to be added, open a issue [here](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/issues/new/choose) and use the `feature request` template
-- if you found something that doesn't work, [open a issue](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/issues/new/choose) and use the `bur report` template. if you have a fix , add it.
+- if you found something that doesn't work, [open a issue](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/issues/new/choose) and use the `bug report` template. if you have a fix , add it.
 - anything else? use the `open a blank issue` option when [opening a issue](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/issues/new/choose).
