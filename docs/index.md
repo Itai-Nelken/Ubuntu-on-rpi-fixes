@@ -77,7 +77,7 @@ sudo systemctl restart systemd-binfmt
 ```
 ### Install box86 updater
 
-1) Go to the [box86 updater github](https://github.com/Botspot/box86-updater)
+1) Go to the [box86 updater github](https://github.com/Botspot/box86-updater)<br>
 2) follow the instructions there. I added them bellow as well:
   
 <b>Download:</b>
