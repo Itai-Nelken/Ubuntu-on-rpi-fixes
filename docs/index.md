@@ -42,7 +42,7 @@ load-module module-udev-detect tsched=0
 ```sh
 sudo apt install gstreamer1.0-libav ffmpeg
 ```
-<b>IF YOU KNOW ANY OTHER FIXES, [OPEN A ISSUE](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/issues/new/) AND TELL ME HOW TO INSTALL IT, SO I CAN ADD IT.</b>
+<b>IF YOU KNOW ANY OTHER FIXES FOR MISSING CODECS IN THE VIDEOS APP, [OPEN A ISSUE](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/issues/new/) AND TELL ME HOW TO INSTALL IT, SO I CAN ADD IT.</b>
 
 ## Install [box86](https://github.com/ptitSeb/box86)
 
@@ -134,7 +134,7 @@ and move it to the zoom folder with this command:
 ```sh
 mv startzoom.sh ~/zoom
 ```
-if you want to create your own script, copy the script bellow to a new file and name it `startzoom.sh`:
+if you want to create your own script, copy the script bellow to a new file and name it `startzoom.sh` (you can change whatever you want, but only if you know what you are doing):
 ```
 #!/bin/bash
 
@@ -179,7 +179,7 @@ sudo mv zoom.desktop /usr/share/applications
 ```
 you'll be asked for your password.
 
-if you prefer to create your own shortcut, copy the text bellow to a new file and call it `zoom.desktop`:
+if you prefer to create your own shortcut, copy the text bellow to a new file and call it `zoom.desktop` (you can change whatever you want, but only if you know what you are doing):
 ```
 [Desktop Entry]
 Version=1.0
@@ -220,6 +220,7 @@ follow the prompts to install the dependencies. if you get errors, and vdesktop 
 ```sh
 sudo apt install -f
 ```
+(to fix any broken packages)
 and run vdesktop again.
 
 ## Install RPi Imager
