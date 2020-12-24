@@ -4,7 +4,7 @@
 ![20.10.png](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/blob/main/screenshots/20.10.png)
 
 ## Flash Ubuntu
-1) Download Ubuntu from here: https://ubuntu.com/download/raspberry-pi<br>
+1) Download Ubuntu from here: [https://ubuntu.com/download/raspberry-pi](https://ubuntu.com/download/raspberry-pi)<br>
 > <b>NOTE:</b> Only Ubuntu 20.10 has a version with a desktop, to use other Versions, download Ubuntu server and use [Desktopify](https://github.com/wimpysworld/desktopify) to install the Ubuntu desktop on it.
 2) flash the file to a SD card (or SSD/USB stick if you want to USB boot) with [etcher](https://www.balena.io/etcher/) or [rpi imager](https://www.raspberrypi.org/software/).
 
