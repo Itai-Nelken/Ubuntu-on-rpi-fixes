@@ -1,4 +1,4 @@
-# Ubuntu-on-rpi-fixes
+# Ubuntu on Raspberry Pi fixes (and more)
 <b>apps, fixes, and optimizations I did on my rpi running Ubuntu desktop.</b><br>
 <br>
 ![20.10.png](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/blob/main/screenshots/20.10.png)
