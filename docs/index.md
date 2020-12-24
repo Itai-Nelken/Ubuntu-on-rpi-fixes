@@ -1,7 +1,7 @@
 # Ubuntu on Raspberry Pi fixes (and more)
 <b>apps, fixes, and optimizations I did on my rpi running Ubuntu desktop.</b><br>
 <br>
-![20.10.png](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/blob/main/screenshots/20.10.png)
+<img src="https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/blob/main/screenshots/20.10.png" alt="20.10.png">
 
 ## Flash Ubuntu
 1) Download Ubuntu from here: [https://ubuntu.com/download/raspberry-pi](https://ubuntu.com/download/raspberry-pi)<br>
