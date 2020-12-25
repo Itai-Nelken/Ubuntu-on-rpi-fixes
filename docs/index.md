@@ -12,14 +12,19 @@
 
 ## Install pi-apps
 
-1.go to the [pi-apps github](https://github.com/botspot/pi-apps) and read about it. <br>
-2.follow the instructions to install from the readme, I added them bellow:
+pi-apps is a raspberry pi app store for open source projects,.<br>it is made for 32bit systems, but has a lot of apps for 64bit systems.
+links: [pi-apps github](https://github.com/botspot/pi-apps)
+follow the instructions to install from the readme in the [pi-apps github](https://github.com/botspot/pi-apps), I added them bellow as well:
 ```sh
 git clone https://github.com/botspot/pi-apps.git
 ~/pi-apps/install
 ```
+>**NOTE:**<br>no modifications needed, but some apps will malfunction or not install correctly
+
 ## fix choppy audio <br>
 
+Ubuntu Desktop on the RPi has a choppy audio problem. it usually starts to happen a few hours after installation.
+**fix:**
 1) open terminal and type:
 ```sh
 sudo gedit /etc/pulse/default.pa 
@@ -34,8 +39,9 @@ load-module module-udev-detect tsched=0
 
 ## Fix missing codecs for Videos app (GNOME videos, totem = same app) <br>
 
-><b>NOTE:</b><br> this only fixes mp4 video and lets you watch from the built in channels, for anything else I recommend VLC (`sudo apt install vlc`) or MPV (`sudo apt install mpv`), they also perform better.
+The GNOME Videos (also known as Totem) has a problem that makes it say its missing codecs,<br>I found out how to fix mp4 video (you can watch frm the built in channels and mp4 video files) but performance is really bad.<br>I recommend to use VLC (`sudo apt install vlc` in terminal to install) or MPV (`sudo apt install mpv` in terminal to install), they peerform much better.
 
+### fixes:
 <b>full error:</b> `the playback of this movie requires a H.264 (Main Profile) decoder which is not installed`<br>
 
 <b>fix:</b><br>
@@ -44,8 +50,12 @@ sudo apt install gstreamer1.0-libav ffmpeg
 ```
 <b>IF YOU KNOW ANY OTHER FIXES FOR MISSING CODECS IN THE VIDEOS APP, [OPEN A ISSUE](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/issues/new/) AND TELL ME HOW TO INSTALL IT, SO I CAN ADD IT.</b>
 
-## Install [box86](https://github.com/ptitSeb/box86)
+## Install [box86](https://ptitseb.github.io/box86/)
+Linux Userspace x86 Emulator with a twist
+Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux, like ARM (host system needs to be 32bit little-endian).
+> You NEED a 32-bit subsystem to run and build Box86. Box86 is useless on 64-bit only systems. Also, you NEED a 32-bit toolchain to build Box86. A toolchain that only support 64-bit will not compile Box86, and you'll get errors (typically on aarch64, you get "-marm" not recognized, and you'll need a multiarch or chroot environnement).
 
+### installation instructions (for ubuntu 64bit, using multiarch):
 <b>add armhf architecture (multiarch):</b><br>
 open terminal and type:
 ```sh
@@ -75,10 +85,23 @@ mkdir build; cd build; cmake .. -DRK3399=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo; ma
 sudo make install
 sudo systemctl restart systemd-binfmt
 ```
+**update box86:**<br> use the box86 updater (installation instructions bellow) or follow the manual instructions (recompile):<br>
+open terminal and type:
+```
+cd ~/box86
+git pull
+cd build; cmake .. -DRK3399=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo; make -j4
+sudo make install
+sudo systemctl restart systemd-binfmt
+```
+
 ### Install box86 updater
 
-1) Go to the [box86 updater github](https://github.com/Botspot/box86-updater)<br>
-2) follow the instructions there. I added them bellow as well:
+box86 updater keeps your box86 installation updated on a weekly basis.
+it avoids having to compile box86 on your Pi, thanks to Pale's automated weekily builds.
+### installation instructions
+Go to the [box86 updater github](https://github.com/Botspot/box86-updater)<br>
+and follow the instructions there. I added them bellow as well:
   
 <b>Download:</b>
 ```sh
@@ -110,7 +133,8 @@ sudo apt install gnome-software-plugin-flatpak gnome-software-plugin-snap
 ```
 
 ## Install Zoom
-
+Zoom cloud meetings Linux x86 (32bit) client running with box86
+### installation instructions
 1) make sure you have box86 installed and updated, if not scroll up and follow the instructions to install it.
 
 2) Install dependencies:
