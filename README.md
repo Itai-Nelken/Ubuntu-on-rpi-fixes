@@ -1,3 +1,6 @@
+# Updated instructions in the [website](https://bit.ly/ubuntu-pi-fixes)
+
+## bellow are the old instructions:
 # Ubuntu-on-rpi-fixes
 <b>apps, fixes, and optimizations for rpi running Ubuntu desktop.</b><br>
 <br>
