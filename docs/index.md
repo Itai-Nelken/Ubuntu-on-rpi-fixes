@@ -143,7 +143,7 @@ Zoom cloud meetings Linux x86 (32bit) client running with box86
 sudo apt install libxcb-shape0:armhf libxcb-randr0:armhf libxcb-image:armhf libxcb-image0:armhf libxcb-xtest0:armhf libxcb-keysyms1:armhf libdbus-1-3:armhf
 ```
 3) Download Zoom:
-as of writing, the [zoom website download](https://zoom.us/client/latest/zoom_i686.tar.xz) is down. you can download a copy I have from [here](https://github.com/Itai-Nelken/Pi-Assistant/raw/main/apps/zoom/files/zoom.tar.xz), save it to your `Downloads` folder.
+as of writing, the [zoom website download](https://zoom.us/client/latest/zoom_i686.tar.xz) is down. you can download a copy I have from [here](https://github.com/Itai-Nelken/Pi-Assistant-files/raw/main/files/zoom.tar.xz), save it to your `Downloads` folder.
 
 4) open terminal and type:
 ```sh
