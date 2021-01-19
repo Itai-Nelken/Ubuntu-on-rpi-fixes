@@ -1,6 +1,9 @@
 # Ubuntu on Raspberry Pi fixes (and more)
 <b>apps, fixes, and optimizations I did on my rpi running Ubuntu desktop.</b><br>
 <br>
+### Disclaimer:
+**everything was tried on a pi4 4gb running Ubuntu Desktop 20.10.
+<br>if you use a different OS/Desktop I'm not responsible for any damage that may or may not happen!**
 <img src="https://raw.githubusercontent.com/Itai-Nelken/Ubuntu-on-rpi-fixes/main/screenshots/20.10.png" alt="20.10.png">
 
 ## Flash Ubuntu
