@@ -1,4 +1,7 @@
 # Updated instructions in the [website](https://bit.ly/ubuntu-pi-fixes)
+### Disclaimer:
+**everything was tried on a pi4 4gb running Ubuntu Desktop 20.10.
+<br>if you use a different OS/Desktop I'm not responsible for any damage that may or may not happen!**
 
 ## [Archived old instructions](Archived-old-instructions.md)
 
@@ -13,9 +16,9 @@ git clone https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes.git; cd Ubuntu-on-r
 ```
 
 ## Contribute
-- if you have something you want to be added, open a issue and use the `feature request` template
-- if you found something that doesn't work, open a issue and use the `bug report` template. if you have a fix , add it.
-- anything else? use the `open a blank issue` option when opening a issue.
+- if you have something you want to be added, open a issue and use the [`feature request`](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/issues/new?assignees=&labels=&template=feature_request.md&title=) template
+- if you found something that doesn't work, open a issue and use the [`bug report`](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/issues/new?assignees=&labels=&template=bug_report.md&title=) template. if you have a fix , add it.
+- anything else? use the [`open a blank issue`](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/issues/new?assignees=&labels=&template=blank-issue.md&title=) option when opening a issue.
 
 ## To do
 - [ ] [add chromium media edition](https://github.com/monkaBlyat/docker-chromium-armhf)
