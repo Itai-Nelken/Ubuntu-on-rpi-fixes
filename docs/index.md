@@ -163,7 +163,7 @@ and move it to the zoom folder with this command:
 mv startzoom.sh ~/zoom
 ```
 if you want to create your own script, copy the script bellow to a new file and name it `startzoom.sh` (you can change whatever you want, but only if you know what you are doing):
-```
+```bash
 #!/bin/bash
 
 function error {
@@ -255,7 +255,7 @@ and run vdesktop again.
 
 0) you could always install the snap or flatpak version, but this is to install the real official version and is more up to date (not that it matters that much, but this version will perform better)
 
-1) go to this [link](http://archive.raspberrypi.org/debian/pool/main/r/rpi-imager/) and scroll down untill you see `rpi-imager_1.4_arm64.deb` (as of writing, v1.4 is the newest version, if there is a newer version, than click on it of course (this version won't be there)) now click on it to download it. 
+1) go to this [link](http://archive.raspberrypi.org/debian/pool/main/r/rpi-imager/) and scroll down untill you see `rpi-imager_1.4_arm64.deb` (as of writing, v1.5 is the newest version, if there is a newer version, than click on it of course (this version won't be there)) now click on it to download it. 
 ><b>NOTE:</b><br>It's completley safe to download from this site, it's the rpi-archive. every time you run `sudo apt install <something>` on RPiOS, apt downloads the `.deb` file from this site, and than installs it (on Ubuntu, apt downloads from [here](https://packages.ubuntu.com)).
 
 2) once finished Downloading open terminal in the folder where you downloaded the file to (unless you changed it it will be the Dowloads folder in your home folder) and type the following in:
@@ -264,7 +264,7 @@ sudo apt install --fix-broken the-deb-file-name.deb
 ```
 but replace `the-deb-file-name.deb` with the name of the file you downloaded, for example this is how it will look as of writing this:
 ```sh
-sudo apt install --fix-broken rpi-imager_1.4_arm64.deb
+sudo apt install --fix-broken rpi-imager_1.5_arm64.deb
 ```
 ><b>NOTE:</b>
 >you can also install by double clicking the `.deb` file. it will open in the package manager (in Ubuntu `software install`) and you simply have to click `Install`, but I think it's better to install from Terminal, personal preference. do whatever method you prefer.
