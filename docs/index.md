@@ -41,6 +41,19 @@ load-module module-udev-detect tsched=0
 ```
 [(source)](https://www.raspberrypi.org/forums/viewtopic.php?f=131&t=289126&p=1769729#p1769729)
 
+## turn on click to minimize for the dock
+
+By default you cant click-to-minimize in the Ubuntu dock, fortunately its really easy to "fix".
+1) install dconf-editor: type in terminal `sudo apt install dconf-editor`<br>
+2) open dconf editor, click the search icon, and search for `dash-to-dock`.
+3) click on the `dash-to-dock` folder to open it.
+4) find and click on `click-action`.
+5) turn off `use default value`.
+6) select `minimize` in custom value,
+7) Done!
+
+[(source)](https://vitux.com/three-methods-to-enable-minimize-on-click-for-ubuntu-dock-icons/)
+
 ## Fix missing codecs for Videos app (GNOME videos, totem = same app) <br>
 
 The GNOME Videos (also known as Totem) has a problem that makes it say its missing codecs,<br>I found out how to fix mp4 video (you can watch frm the built in channels and mp4 video files) but performance is really bad.<br>I recommend to use VLC (`sudo apt install vlc` in terminal to install) or MPV (`sudo apt install mpv` in terminal to install), they peerform much better.
