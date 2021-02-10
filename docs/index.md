@@ -16,7 +16,7 @@
 
 ## Install pi-apps
 
-pi-apps is a raspberry pi app store for open source projects,.<br>it is made for 32bit systems, but has a lot of apps for 64bit systems.
+pi-apps is a raspberry pi app store for open source projects,.<br>it is made for 32bit systems, but has a lot of apps for 64bit systems.<br>
 links: [pi-apps github](https://github.com/botspot/pi-apps)
 follow the instructions to install from the readme in the [pi-apps github](https://github.com/botspot/pi-apps), I added them bellow as well:
 ```sh
