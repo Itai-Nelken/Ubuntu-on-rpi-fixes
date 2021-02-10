@@ -17,7 +17,7 @@
 ## Install pi-apps
 
 pi-apps is a raspberry pi app store for open source projects,.<br>it is made for 32bit systems, but has a lot of apps for 64bit systems.<br>
-links: [pi-apps github](https://github.com/botspot/pi-apps)
+links: [pi-apps github](https://github.com/botspot/pi-apps)<br>
 follow the instructions to install from the readme in the [pi-apps github](https://github.com/botspot/pi-apps), I added them bellow as well:
 ```sh
 git clone https://github.com/botspot/pi-apps.git
@@ -43,14 +43,14 @@ load-module module-udev-detect tsched=0
 
 ## turn on click to minimize for the dock
 
-By default you cant click-to-minimize in the Ubuntu dock, fortunately its really easy to "fix".
+By default you cant click-to-minimize in the Ubuntu dock, fortunately its really easy to "fix".<br>
 1) install dconf-editor: type in terminal `sudo apt install dconf-editor`<br>
-2) open dconf editor, click the search icon, and search for `dash-to-dock`.
-3) click on the `dash-to-dock` folder to open it.
-4) find and click on `click-action`.
-5) turn off `use default value`.
-6) select `minimize` in custom value,
-7) Done!
+2) open dconf editor, click the search icon, and search for `dash-to-dock`.<br>
+3) click on the `dash-to-dock` folder to open it.<br>
+4) find and click on `click-action`.<br>
+5) turn off `use default value`.<br>
+6) select `minimize` in custom value,<br>
+7) Done!<br>
 
 [(source)](https://vitux.com/three-methods-to-enable-minimize-on-click-for-ubuntu-dock-icons/)
 
@@ -68,8 +68,8 @@ sudo apt install gstreamer1.0-libav ffmpeg
 <b>IF YOU KNOW ANY OTHER FIXES FOR MISSING CODECS IN THE VIDEOS APP, [OPEN A ISSUE](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/issues/new/) AND TELL ME HOW TO INSTALL IT, SO I CAN ADD IT.</b>
 
 ## Install [box86](https://ptitseb.github.io/box86/)
-Linux Userspace x86 Emulator with a twist
-Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux, like ARM (host system needs to be 32bit little-endian).
+Linux Userspace x86 Emulator with a twist<br>
+Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux, like ARM (host system needs to be 32bit little-endian).<br>
 > You NEED a 32-bit subsystem to run and build Box86. Box86 is useless on 64-bit only systems. Also, you NEED a 32-bit toolchain to build Box86. A toolchain that only support 64-bit will not compile Box86, and you'll get errors (typically on aarch64, you get "-marm" not recognized, and you'll need a multiarch or chroot environnement).
 
 ### installation instructions (for ubuntu 64bit, using multiarch):
@@ -114,8 +114,8 @@ sudo systemctl restart systemd-binfmt
 
 ### Install box86 updater
 
-box86 updater keeps your box86 installation updated on a weekly basis.
-it avoids having to compile box86 on your Pi, thanks to Pale's automated weekily builds.
+box86 updater keeps your box86 installation updated on a weekly basis.<br>
+it avoids having to compile box86 on your Pi, thanks to Pale's automated weekily builds.<br>
 ### installation instructions
 Go to the [box86 updater github](https://github.com/Botspot/box86-updater)<br>
 and follow the instructions there. I added them bellow as well:
@@ -245,7 +245,7 @@ before running there are a few steps to follow if you plan to boot OS's to Deskt
 
 1) <b>Compile VirGL:</b><br>
  -`sudo apt purge libepoxy0:armhf; sudo apt purge libepoxy-dev:armhf` <br>
- -`sudo apt install -y libepoxy0; sudo apt install libepoxy-dev`<br>
+ -`sudo apt install -y libepoxy0; sudo apt install -y libepoxy-dev`<br>
  -`sudo apt install -y meson libdrm-dev cmake libgbm-dev`<br>
  -`git clone https://gitlab.freedesktop.org/virgl/virglrenderer.git`<br>
  -`cd virglrenderer`<br>
@@ -266,10 +266,10 @@ and run vdesktop again.
 
 ## Install RPi Imager
 
-0) you could always install the snap or flatpak version, but this is to install the real official version and is more up to date (not that it matters that much, but this version will perform better)
+0) you could always install the snap or flatpak version, but this is to install the real official version and is more up to date (not that it matters that much, but this version will perform better in my opinion. also the newest version is always available, while the snap and flatak take a long time to get updates)
 
-1) go to this [link](http://archive.raspberrypi.org/debian/pool/main/r/rpi-imager/) and scroll down untill you see `rpi-imager_1.4_arm64.deb` (as of writing, v1.5 is the newest version, if there is a newer version, than click on it of course (this version won't be there)) now click on it to download it. 
-><b>NOTE:</b><br>It's completley safe to download from this site, it's the rpi-archive. every time you run `sudo apt install <something>` on RPiOS, apt downloads the `.deb` file from this site, and than installs it (on Ubuntu, apt downloads from [here](https://packages.ubuntu.com)).
+1) go to this [link](http://archive.raspberrypi.org/debian/pool/main/r/rpi-imager/) and scroll down untill you see `rpi-imager_1.5_arm64.deb` (as of writing, v1.5 is the newest version, if there is a newer version, than click on it of course (this version won't be there)) now click on it to download it. 
+><b>NOTE:</b><br>It's completley safe to download from this site, it's the rpi-archive. every time you run `sudo apt install <something>` on RPiOS, apt downloads the `.deb` file from this site, and than installs it (on Ubuntu, apt downloads from [here](http://archive.ubuntu.com/) I think).
 
 2) once finished Downloading open terminal in the folder where you downloaded the file to (unless you changed it it will be the Dowloads folder in your home folder) and type the following in:
 ```sh
