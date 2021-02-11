@@ -167,9 +167,9 @@ cd ~/Downloads
 tar -xf zoom.tar.xz /home/$USER
 ```
 5) create launcher script:<br>
-download my [launcher script](https://github.com/Itai-Nelken/Pi-Assistant/blob/main/apps/zoom/startzoom.sh) with this command
+download my [launcher script](https://raw.githubusercontent.com/Itai-Nelken/Ubuntu-on-rpi-fixes/main/files/startzoom.sh) with this command
 ```sh
-wget https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/apps/zoom/startzoom.sh
+wget https://raw.githubusercontent.com/Itai-Nelken/Ubuntu-on-rpi-fixes/main/files/startzoom.sh
 ```
 and move it to the zoom folder with this command:
 ```sh
@@ -178,63 +178,67 @@ mv startzoom.sh ~/zoom
 if you want to create your own script, copy the script bellow to a new file and name it `startzoom.sh` (you can change whatever you want, but only if you know what you are doing):
 ```bash
 #!/bin/bash
-
 function error {
   echo -e "\\e[91m$1\\e[39m"
   exit 1
 }
-
 
 if [ -d ~/box86 ]; then
 
   echo "box86 installed..."
 
 else
-  echo "Box86 missing, please install"
-  exit 1 
-
+  error "Box86 missing! please install"
 fi
 
-	
+if [ -d ~/zoom ]; then
+  echo "zoom folder exists..."
+else
+  error "zoom folder is missing! please reinstall zoom"
+fi
+
 #go to zoom directory (~/zoom)
-cd ~/zoom
+cd $HOME/zoom || error 'Failed to change directory to ~/zoom!'
 echo "$(tput setaf 3)close this window to exit zoom$(tput sgr 0)"
-sleep 2
-echo "$(tput setaf 2)starting zoom, ignore any errors...$(tput sgr 0)"
+sleep 1
+echo "$(tput setaf 2)starting zoom...$(tput sgr 0)"
 sleep 1
 #start zoom with box86
 pulseaudio --start
 box86 zoom || error "can't start zoom!"
-echo "$(tput setaf 2)exiting in 5 seconds:($(tput sgr 0)"
+echo "$(tput setaf 2)exiting in 5 seconds.$(tput sgr 0)"
 sleep 5
 ```
 
 6) create desktop shortcut:<br>
-Download my [desktop shortcut file](https://github.com/Itai-Nelken/Pi-Assistant/blob/main/apps/zoom/files/zoom.desktop) with this command:
+<!--
+Download my [desktop shortcut file](https://raw.githubusercontent.com/Itai-Nelken/Ubuntu-on-rpi-fixes/main/files/zoom.desktop) with this command:
 ```sh
 wget https://raw.githubusercontent.com/Itai-Nelken/Ubuntu-on-rpi-fixes/main/files/zoom.desktop
 ```
-and move it to /usr/share/applications with this command:
-```sh
-sudo mv zoom.desktop /usr/share/applications
-```
-you'll be asked for your password.
-
-if you prefer to create your own shortcut, copy the text bellow to a new file and call it `zoom.desktop` (you can change whatever you want, but only if you know what you are doing):
+-->
+create a file called `zoom.desktop` and save it to somwhere like your desktop.
+paste the following into the file but change `path/to/zoom-icon.png` with the real path to a zoom icon like [this one](https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/icons/zoom-icon.png)(right click and 'save as'... to download it):
 ```
 [Desktop Entry]
-Version=1.0
 Type=Application
 Name=Zoom
 Comment=Linux x86 version of Zoom cloud meetings running using Box86
 Exec=~/zoom/startzoom.sh
-Icon=~/Pi-Assistant/icons/zoom-icon.png
-Path=~/Pi-Assistant/apps/zoom
+Icon=path/to/zoom-icon.png
+Path=~/zoom
 Terminal=true
 StartupNotify=false
 Categories=Network;
 ```
 ><b>NOTE:</b><br> you can call the file whatever you want, but remember to add the `.desktop` file extension
+
+in file manager go to the folder where the `zoom.desktop` is, right click and click on `open in terminal`, now type the following<br>
+to move the file to /usr/share/applications and make it appear in the main menu:
+```bash
+sudo mv zoom.desktop /usr/share/applications
+```
+you'll be asked for your password.
 
 ## Install vdesktop
 1) go to the [vdesktop github](https://github.com/botspot/vdesktop) and follow the download instructions, I added them bellow as well:
