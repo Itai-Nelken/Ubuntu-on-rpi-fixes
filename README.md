@@ -12,7 +12,7 @@ the experimental scripts - located in the scripts folder in this repo - ask you 
 <b>To run:</b><br>
 open terminal and type:
 ```
-git clone https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes.git; cd Ubuntu-on-rpi-fixes; sudo chmod +x main.sh; ./main.sh
+git clone https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes.git; cd Ubuntu-on-rpi-fixes/scripts; sudo chmod +x main.sh; ./main.sh
 ```
 
 ## Contribute
