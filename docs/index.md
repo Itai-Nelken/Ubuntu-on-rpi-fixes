@@ -6,6 +6,8 @@
 <br>if you use a different OS/Desktop I'm not responsible for any damage that may or may not happen!**
 <img src="https://raw.githubusercontent.com/Itai-Nelken/Ubuntu-on-rpi-fixes/main/screenshots/20.10.png" alt="20.10.png">
 
+# If you need any help, feel free to ask here: https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/discussions
+
 ## Flash Ubuntu
 1) Download Ubuntu from here: [https://ubuntu.com/download/raspberry-pi](https://ubuntu.com/download/raspberry-pi)<br>
 > <b>NOTE:</b> Only Ubuntu 20.10 has a version with a desktop, to use other Versions, download Ubuntu server and use [Desktopify](https://github.com/wimpysworld/desktopify) to install the Ubuntu desktop on it.<br>
