@@ -1,7 +1,7 @@
 # Updated instructions in the [website](https://bit.ly/ubuntu-pi-fixes)
 ### Disclaimer:
-**everything was tried on a pi4 4gb running Ubuntu Desktop 20.10.
-<br>if you use a different OS/Desktop I'm not responsible for any damage that may or may not happen!**
+**everything was tried on a pi4 4gb running Ubuntu Desktop 20.10 and 21.04.
+<br>if you use a different OS/Desktop I'm not responsible for any damage that may happen (but should not happen if you follow the instructions)!**
 
 ## [Archived old instructions](Archived-old-instructions.md)
 
