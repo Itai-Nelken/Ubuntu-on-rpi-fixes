@@ -76,7 +76,7 @@ The GNOME Videos (also known as Totem) has a problem that makes it say its missi
 ```sh
 sudo apt install gstreamer1.0-libav ffmpeg
 ```
-<b>IF YOU KNOW ANY OTHER FIXES FOR MISSING CODECS IN THE VIDEOS APP, [OPEN A ISSUE](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/issues/new/) AND TELL ME HOW TO INSTALL IT, SO I CAN ADD IT.</b>
+<b>IF YOU KNOW ANY OTHER FIXES FOR MISSING CODECS IN THE VIDEOS APP, [OPEN AN ISSUE](https://github.com/Itai-Nelken/Ubuntu-on-rpi-fixes/issues/new/) AND TELL ME HOW TO INSTALL IT, SO I CAN ADD IT.</b>
 
 ## Install [box86](https://ptitseb.github.io/box86/)
 Linux Userspace x86 Emulator with a twist<br>
@@ -132,7 +132,7 @@ sudo systemctl restart systemd-binfmt
 ### Install box86 updater (NOT NEEDED IF BOX86 WAS INSTALLED FROM PI-APPS)
 
 box86 updater keeps your box86 installation updated on a weekly basis.<br>
-it avoids having to compile box86 on your Pi, thanks to Pale's automated weekily builds.<br>
+it avoids having to compile box86 on your Pi, thanks to Pale's automated weekly builds.<br>
 ### installation instructions
 Go to the [box86 updater github](https://github.com/Botspot/box86-updater)<br>
 and follow the instructions there. I added them bellow as well:
